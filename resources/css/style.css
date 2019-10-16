@@ -1,0 +1,44 @@
+.page_grid {
+  width: 99vw;
+  height: 99vh;
+  display: grid;
+  grid-template-columns: auto 3fr auto;
+  grid-template-rows: auto 5fr auto;
+  grid-template-areas:
+  "header   header header header header"
+  "left-bar main   main   main   right-bar"
+  "left-bar main   main   main   right-bar"
+  "left-bar main   main   main   right-bar"
+  "footer   footer footer footer footer"
+  ;
+}
+
+header {
+  grid-area: header;
+background-color: aqua;
+}
+
+main {
+  align-content: center;
+  grid-area: main;
+  background-color: blueviolet;
+}
+
+nav {
+  background-color: chartreuse;
+}
+
+nav>:left {
+  grid-area: left-bar;
+}
+
+
+nav>:right {
+  grid-area: right-bar;
+}
+
+footer {
+  text-align: right;
+  grid-area: footer;
+  background-color: red;
+}
