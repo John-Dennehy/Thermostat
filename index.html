@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Thermostat</title>
   </head>
   <script src="resources/js/thermostat.js"></script>
@@ -17,6 +18,9 @@
         Left Bar
       </nav>
       <main>
+        <section>
+          <h1>Current temperature: <span id="current-temperature"></span></h1>
+        </section>
         <div class="thermostat">
           <button class="temp-up">Up</button>
           <button class="temp-down">Down</button>
@@ -31,6 +35,5 @@
         <a href="https://github.com/JDtheGeek">JDtheGeek</a>
       </footer>
     </div>
-
   </body>
 </html>
