@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Thermostat</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <title>Thermostat</title>
+</head>
+
+<body>
+  <div class="page_grid">
+    <header>
+      <h1>Thermostat Interface</h1>
+    </header>
+    <nav class="left">
+      Left Bar
+    </nav>
+    <main>
+      <section>
+        <h1>Current temperature: <span id="current-temperature"></span></h1>
+      </section>
+      <div class="thermostat">
+        <button id="temp-up">Up</button>
+        <button id="temp-down">Down</button>
+        <label id="pwm-status" for="psm_checkbox">Powersave Mode</label>
+
+        <input type="checkbox" class="temp-PSM" name="PSM" id="psm-checkbox" checked />
+        <button id="temp-reset">Reset</button>
+      </div>
+    </main>
+    <nav class="right">
+      Right Bar
+    </nav>
+    <footer>
+      <a href="https://github.com/JDtheGeek">JDtheGeek</a>
+    </footer>
+  </div>
+
   <script src="resources/js/thermostat.js"></script>
-  <body>
-    <div class="page_grid">
-      <header>
-        <h1>Thermostat Interface</h1>
-      </header>
-      <nav class="left">
-        Left Bar
-      </nav>
-      <main>
-        <section>
-          <h1>Current temperature: <span id="current-temperature"></span></h1>
-        </section>
-        <div class="thermostat">
-          <button class="temp-up">Up</button>
-          <button class="temp-down">Down</button>
-          <input type="checkbox" class="temp-PSM" name="PSM" id="" />
-          <button type="reset">Reset</button>
-        </div>
-      </main>
-      <nav class="right">
-        Right Bar
-      </nav>
-      <footer>
-        <a href="https://github.com/JDtheGeek">JDtheGeek</a>
-      </footer>
-    </div>
-  </body>
+  <script src="resources/js/interface.js"></script>
+</body>
+
 </html>

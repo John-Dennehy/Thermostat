@@ -1,5 +1,5 @@
 class Thermostat {
-  constructor () {
+  constructor() {
     this.DEFAULT_TEMP = 20
     this.MIN_LIMIT = 10
     this.MAX_LIMIT_PSM_OFF = 32
@@ -9,18 +9,18 @@ class Thermostat {
     this.PowerSaveModeOn = true
   }
 
-  getCurrentTemp () {
+  getCurrentTemp() {
     return this.currentTemp
   }
 
-  up () {
+  up() {
     if (this.isMaximumTempOrHigher()) {
       return
     }
     this.currentTemp += 1
   }
 
-  down () {
+  down() {
     if (this.isMinimumTempOrLower()) {
       this.currentTemp = this.MIN_LIMIT
     } else {
@@ -28,7 +28,7 @@ class Thermostat {
     }
   }
 
-  setTemp (newTemp) {
+  setTemp(newTemp) {
     this.currentTemp = newTemp
     if (this.isMinimumTempOrLower()) {
       this.currentTemp = this.MIN_LIMIT
@@ -39,34 +39,34 @@ class Thermostat {
     return this.currentTemp >= this.MAX_LIMIT_PSM_OFF
   }
 
-  isMinimumTempOrLower () {
+  isMinimumTempOrLower() {
     return this.currentTemp <= this.MIN_LIMIT
   }
 
-  isMaximumTempOrHigher () {
+  isMaximumTempOrHigher() {
     if (this.isPowerSaveOn()) {
       return this.currentTemp >= this.MAX_LIMIT_PSM_ON
     }
     return this.currentTemp >= this.MAX_LIMIT_PSM_OFF
   }
 
-  isPowerSaveOn () {
+  isPowerSaveOn() {
     return this.PowerSaveModeOn
   }
 
-  powerSaveOn () {
+  powerSaveOn() {
     this.PowerSaveModeOn = true
   }
 
-  powerSaveOff () {
+  powerSaveOff() {
     this.PowerSaveModeOn = false
   }
 
-  resetTemp () {
+  resetTemp() {
     this.currentTemp = this.DEFAULT_TEMP
   }
 
-  energyUsage () {
+  energyUsage() {
     if (this.currentTemp < this.MID_LIMIT) {
       return 'low-usage'
     }
